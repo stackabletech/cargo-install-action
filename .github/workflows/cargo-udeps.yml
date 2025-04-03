@@ -13,4 +13,5 @@ jobs:
       crate: cargo-udeps
     permissions:
       contents: write
-    secrets: inherit
+    secrets:
+      private_key: ${{ secrets.PRIVATE_KEY }}
