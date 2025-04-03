@@ -11,6 +11,7 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       crate: cargo-udeps
+      locked: true
     permissions:
       contents: write
     secrets:
