@@ -35,14 +35,13 @@ jobs:
     name: ${{inputs.crate}} - ${{matrix.runner}}
     strategy:
       matrix:
-        runner: ["ubuntu-latest", "buildjet-4vcpu-ubuntu-2204-arm"]
+        runner: ["ubuntu-latest", "ubicloud-standard-8-arm"]
     runs-on: ${{ matrix.runner }}
     permissions:
       contents: write
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: ${{inputs.git}}
           ref: ${{inputs.ref}}
